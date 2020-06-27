@@ -12,7 +12,7 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 1;
 
 /* time in seconds before the monitor shuts down */
-static const int monitortime = 5;
+static const int monitortime = 15;
 
 /* default message */
 static const char * message = "Suckless: Software that sucks less.";
