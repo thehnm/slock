@@ -8,6 +8,19 @@ static const char *colorname[NUMCOLS] = {
 	[FAILED] = "#CC3333",   /* wrong password */
 };
 
+/* text color */
+static char * text_color = "#ffffff";
+
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+	{ "col_init",	STRING,  &colorname[INIT] },
+	{ "col_input",	STRING,  &colorname[INPUT] },
+	{ "col_failed",	STRING,  &colorname[FAILED] },
+	{ "col_fg",		STRING,  &text_color },
+};
+
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
@@ -16,9 +29,6 @@ static const int monitortime = 15;
 
 /* default message */
 static const char * message = "Suckless: Software that sucks less.";
-
-/* text color */
-static const char * text_color = "#ffffff";
 
 /* text size (must be a valid size) */
 static const char * font_name = "6x13";
